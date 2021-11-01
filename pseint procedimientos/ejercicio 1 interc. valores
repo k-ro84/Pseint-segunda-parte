@@ -1,0 +1,18 @@
+
+//1. Realizar un procedimiento que permita intercambiar el valor de dos variables de tipo
+//entero. La variable A, debe terminar con el valor de la variable B
+Algoritmo procedimiento_cambio_valor_de_variables
+	Definir num1, num2 Como Entero
+	Escribir "ingrese dos numeros a intercambiar valor"
+	Leer num1;
+	Leer num2;
+	intercambio(num1,num2)
+	Escribir " valor primer numero ", num1, " valor segundo numero ", num2;
+    FinAlgoritmo
+	SubProceso intercambio( num1 por referencia, num2 por referencia)
+		num1=num1+num2
+		num2=num1-num2
+		num1=num1-num2
+		
+     FinSubProceso
+		

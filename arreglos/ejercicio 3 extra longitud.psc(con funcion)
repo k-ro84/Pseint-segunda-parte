@@ -1,0 +1,59 @@
+SubProceso llenado(vectorA,vectorB,tamanio)
+	definir i Como Entero
+	Para i<-0 Hasta tamanio-1  Hacer
+		Leer vectorA(i)
+	Fin Para
+FinSubProceso
+SubProceso deletr(vectorA,vectorB,tamanio)
+	definir i Como Entero
+	Para i<-0 Hasta tamanio-1 Con Paso 1 Hacer
+		vectorB(i)=Longitud(vectorA(i))
+	Fin Para
+	Escribir "vectores ingresados fueron"
+FinSubProceso
+
+SubProceso paso_a_b(vectorA,vectorB,tamanio)
+	Definir i Como Entero
+	Para i<-0 Hasta tamanio-1 Con Paso 1 Hacer
+		Escribir Sin Saltar "(" , vectorA(i), ")"
+	Fin Para
+	Escribir ""
+	Para i<-0 Hasta tamanio-1 Con Paso 1 Hacer
+		Escribir "(" , vectorB(i), ")"
+	Fin Para
+	Escribir ""
+FinSubProceso
+//3. Crear dos vectores que tengan el mismo tamaño (el tamaño se pedirá por teclado) y
+//almacenar en uno de ellos nombres de personas como cadenas. En el segundo vector
+//se debe almacenar la longitud de cada uno de los nombres (para ello puedes usar la
+//	función Longitud() de PseInt). Mostrar por pantalla cada uno de los nombres junto con su
+//	longitud.
+Algoritmo nm_y_long
+	Definir vectorA Como Caracter
+	Definir i,tamanio,size,vectorB Como Entero
+	
+	Escribir "ingrese el tamaño de sus vectores"
+	Leer tamanio
+	Dimension vectorA(tamanio),vectorB(tamanio)
+	
+	Escribir "ingrese nombres"
+	
+	llenado(vectorA,vectorB,tamanio)
+	
+	deletr(vectorA,vectorB,tamanio)
+	
+	paso_a_b(vectorA,vectorB,tamanio)
+	
+FinAlgoritmo
+//SubProceso deletr(vectorA,tamanio)                ////solo e da la longitud del prim del vector a 
+//	definir size,i,contador Como Entero
+//	i<-0
+//	size=Longitud(vectorA(i))
+//	contador<-0
+//	
+//	Para i<-0 Hasta size Con Paso -1 Hacer
+//		letra=SubCadena(frase,i,i);
+//		contador=contador+1
+//	Fin Para
+//	Escribir "la longitud de: " "(",contador,")", " es : " size
+//FinSubProceso

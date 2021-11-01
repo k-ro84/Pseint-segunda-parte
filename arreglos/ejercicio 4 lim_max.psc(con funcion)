@@ -1,0 +1,37 @@
+
+SubProceso ingresoDeDatos(vector,i)
+	Escribir "Ingrese los valores del vector: "
+	Para i=0 hasta i-1
+		Leer vector(i)
+	FinPara
+FinSubProceso
+
+Funcion valorMaximo<- valorIngresado(vector Por referencia, i) 
+	Definir valorMaximo como entero 
+	valorMaximo= vector(0)
+   Para i=0 Hasta i-1
+	    si vector(i)>valorMaximo Entonces
+			valorMaximo= vector(i)
+	    FinSi
+   FinPara
+	
+ FinFuncion
+//4. Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
+//usuario. A continuación, se deberá crear una función que reciba el vector y devuelva el
+//valor más grande del vector.
+
+Algoritmo ejerccuatro      //modo on SubProceso 
+   Definir vector ,i ,valorMaximo Como Entero
+   valorMaximo=0
+   i=0
+   //DATOS DE ENTRADA
+	Escribir "Ingrese el tamaño del vector"
+	Leer i
+	Dimension vector(i)
+	
+	ingresoDeDatos(vector,i)
+	valorMaximo=valorIngresado(vector,i)
+ 
+	Escribir "El valor maximo ingresado es: " valorMaximo
+
+FinAlgoritmo
