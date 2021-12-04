@@ -1,0 +1,49 @@
+Algoritmo Datos_Calificaciones
+	Definir cantidadAlumnos, alumnosRegular, cuenta, cuentaDesaprobados, cuentaIntegrador Como Entero;
+	Definir notaParcial, notaFinal, notaIntegrador, notaExpo, notaPromedio, notaDesaprobado, notaPromedioDesaprobado, notaExpoMayor, alumnosPromocion, porcentajeIntegrador Como Real;
+	Escribir Sin Saltar "Ingresar cantidad de alumnos a procesar";
+	Leer cantidadAlumnos;
+	cuentaDesaprobados=0;
+	notaDesaprobado=0;
+	notaPromedioDesaprobado=0;
+	cuentaIntegrador=0;
+	alumnosRegular=0;
+	porcentajeIntegrador=0;
+	notaExpoMayor=0;
+
+	Para cuenta<-1 Hasta cantidadAlumnos Con Paso 1 Hacer
+		Escribir Sin Saltar "Alumno " cuenta " Nota de Trabajo P. Integrador";
+		Leer notaIntegrador;
+		Escribir Sin Saltar "Alumno " cuenta " Nota de Exposición";
+		Leer notaExpo;
+		Escribir Sin Saltar "Alumno " cuenta " Nota de Parcial";
+		Leer notaParcial;
+		notaFinal= (notaIntegrador*.35) + (notaExpo*.25) + (notaParcial*.4);
+		
+		si notaFinal<6.5 Entonces
+			cuentaDesaprobados= cuentaDesaprobados+1;
+			notaDesaprobado= notaFinal;
+			notaPromedioDesaprobado= notaDesaprobado/cuentaDesaprobados;
+		FinSi
+		
+		si notaIntegrador>7.5 Entonces
+			cuentaIntegrador= cuentaIntegrador+1;
+			porcentajeIntegrador= cuentaIntegrador/cantidadAlumnos*100;
+		FinSi
+		
+		si notaExpoMayor<notaExpo Entonces
+			notaExpoMayor=notaExpo;
+		FinSi
+		
+		Si notaParcial>=0 Y notaParcial<=7.5 Entonces
+			alumnosRegular= alumnosRegular+1;
+		FinSi
+	Fin Para
+	
+	Escribir notaPromedioDesaprobado " Nota promedio final de los estudiantes que reprobaron el curso";
+	Escribir porcentajeIntegrador "% de alumnos con Nota de Integrador mayor a 7.5";
+	Escribir notaExpoMayor " Es la mayor nota obtenida en las exposiciones";
+	Escribir alumnosRegular " Estudiantes con Nota de Parcial entre 4.0 y 7.5";
+	
+	
+FinAlgoritmo
